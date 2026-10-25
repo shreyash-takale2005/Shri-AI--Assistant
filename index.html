@@ -283,7 +283,7 @@ mic.onclick = () => {
     voice.lang = "en-IN";
     speechSynthesis.speak(voice);
   };
-  recognition.onerror = () => alert("Please allow microphone access.");
+  recognition.onerror = (event) => alert("Speech error: " + event.error);
   recognition.start();
 };
 </script>
